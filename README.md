@@ -1,3 +1,9 @@
+# IMPORTANT
+This is a fork of the original `react-gradient-color-picker` package. 
+
+We have made some changes to the original package to make it more suitable for our use case.
+- limit gradient nodes to 2
+
 [![Npm Version][npm-version-image]][npm-version-url]
 [![Downloads][downloads-image]][downloads-url]
 [![License][license-image]][license-url]
