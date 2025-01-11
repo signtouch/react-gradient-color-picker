@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { usePicker } from '../context.js'
 import { formatInputValues, low, high } from '../utils/formatters.js'
 import { controlBtnStyles } from '../styles/styles.js'
@@ -193,7 +193,16 @@ const GradientControls = ({
   hideGradientAngle?: boolean
   hideGradientStop?: boolean
 }) => {
-  const { gradientType, defaultStyles, pickerIdSuffix } = usePicker()
+  const { gradientType, colors, createGradientStr, defaultStyles, pickerIdSuffix } = usePicker()
+
+  useEffect(() => {
+    if (colors?.length > 2) {
+      const limited = colors?.slice(0, 2);
+      
+      createGradientStr(limited)
+    }
+  }, [colors])
+
   return (
     <div
       style={{
