@@ -91,6 +91,6 @@
   },
   "homepage": "https://gradient-package-demo.web.app/",
   "publishConfig": {
-    "@hxf31891:registry": "https://npm.pkg.github.com"
+    "@signtouch:registry": "https://npm.pkg.github.com"
   }
 }
